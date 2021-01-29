@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <title>ex7</title>
+  </head>
+  <body>
+    <h1>Info</h1>
+    <script>
+      var members = {};
+      members.programmer="Lee";
+      members.designer="Chae";
+      members.director="Rin";
+      document.write("programemr : "+members.programmer+"<br>");
+      document.write("designer : "+members.designer+"<br>");
+      document.write("director : "+members.director+"<br>");
+      members["data scientist"]="study";
+      document.write("data scientist : "+members["data scientist"]+"<br>");
+      </script>
+      <h2>Member</h2>
+      <script>
+      members.showAll=function(){
+        for(var key in this){
+          if(key!="showAll"){
+          document.write(key+' : '+this[key]+'<br>');
+        }
+      }
+    }
+    members.showAll();
+    </script>
+  </body>
+</html>
