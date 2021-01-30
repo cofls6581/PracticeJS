@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    .js{ /*class*/
+      font-weight: bold;
+      color:orange;
+      background-color: grey;
+    }
+    #first{ /*id*/
+        color:blue;
+      }
+    span{ /*alltag*/
+        color:green;
+      }
+      /*id>class>span*/
+    </style>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    function NightDay(parameter){
+      var target= document.querySelector('body');
+      if(parameter.value ==='night'){
+        target.style.backgroundColor='black';
+        target.style.color='white';
+        parameter.value='day';
+        // var alist=document.querySelectorAll('a');
+        // var i=0;
+        // while(i<alist.length){
+        //   alist[i].style.color='red';
+        //   i=i+1;
+        // }
+          $('a').css('color','red');
+      } else{
+        target.style.backgroundColor='white';
+        target.style.color='black';
+        parameter.value='night';
+        // var alist=document.querySelectorAll('a');
+        // var i=0;
+        // while(i<alist.length){
+        //   alist[i].style.color='green';
+        //   i=i+1;
+        // }
+        $('a').css('color','green');
+      }
+    }
+    </script>
+    <title>css</title>
+  </head>
+  <body >
+    <h1 style="color:grey;"><a href="js.html"> js</a></h1>
+    <input type="button" value="night" onclick="
+    NightDay(this);
+    ">
+    <script>
+      var names=['Lee','Lim','Kim','Song'];
+      var i=0;
+      while(i<names.length){
+        document.write('<li><a href="http://site.com/'+names[i]+'">'+names[i]+'</a></li>');
+        i=i+1;
+      }
+    </script>
+    <p>
+      <span id="first" class="js">JavaScript(JS)</span>는 가벼운 인터프리터 또는 JIT 컴파일 프로그래밍 언어로, 일급 함수를 지원합니다.
+      웹 페이지의 스크립트 언어로서 제일 유명하지만 Node.js, Apache CouchDB, Adobe Acrobat처럼
+      많은 비 브라우저 환경에서도 사용하고 있습니다. <span class="js">JavaScript(JS)</span>는 프로토타입 기반의 동적 다중 패러다임 스크립트 언어로,
+      객체지향형, 명령형, 선언형(함수형 프로그래밍 등) 스타일을 지원합니다.
+    </p>
+
+  </body>
+</html>
